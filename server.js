@@ -16,11 +16,8 @@ server.set('view engine', 'mustache');
 var word = [];
 var wordsUnknown = [];
 const words = fileStream.readFileSync("/usr/share/dict/words", "utf-8").toLowerCase().split("\n");
-
 var random = Math.floor((Math.random() * (words.length - 1)));
 var hangWord = words[random];
-
-
 var unknownFields = {}; 
 var hangWordHidden = new Array(hangWord.length); 
 
@@ -42,8 +39,6 @@ server.use(expressSession({
   saveUninitialized: true,
 }))
 server.use(expressValidator());
-
-
 server.get('/', (request, response) => {
   request.session.hangWord = hangWord;
   request.session.unknownWord = hangWordHidden;
@@ -54,19 +49,13 @@ server.get('/', (request, response) => {
     unknownWord: request.session.unknownWord,
     lettersGuessed: request.session.lettersGuessed,
     trials: request.session.trials,
-
   }
-
   response.render('index', model);
 });
-
 server.post('/', (request, response) => {
-
   var letter = request.body.letter; 
   letter = letter.toLowerCase();
-
   var hit = false;
-
   for (var i = 0; i < hangWord.length; i++) {
     if (hangWord[i] === letter) {
       request.session.unknownWord[i] = letter;
