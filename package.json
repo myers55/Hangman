@@ -1,0 +1,23 @@
+{
+  "name": "Week-five-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "express-sessions": "^1.0.6",
+    "express-validator": "^4.1.0",
+    "fs": "0.0.1-security",
+    "morgan": "^1.8.2",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.5"
+  }
+}

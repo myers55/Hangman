@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class='header'>
+            <h3>Lets Play Hangman</h3>
+        </div>
+        <h1 class='guess'>
+            {{#unknownWord}} {{.}} {{/unknownWord}}
+        </h1>
+        <form class='form' method='post' action='/'>
+            <input type="text" name="letter" placeholder="Enter Letter" maxlength='1'>
+            <input type="submit" value="Guess!">
+        </form>
+        <div class='guesses'>
+            <div>
+                <h3>You've guessed:{{lettersGuessed}} {{^lettersGuessed}} Nothing yet, lets get guessing! {{/lettersGuessed}}
+                </h3>
+            </div>
+            <br>
+            <div>
+                <div class='header'>
+                    <h3>You have {{trials}} attempts left</h3>
+                </div>
+                <h3>{{answer}}</h3>
+            </div>
+        </div>
+        <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>`
