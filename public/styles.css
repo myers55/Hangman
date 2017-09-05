@@ -1,4 +1,26 @@
-.container{
+body{
+
+    background-image: url("/one.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header{
+    color: firebrick;
+    font-size: 3em;
+}
+.hangman{
     justify-content: center;
     text-align: center;
+    
+}
+.guess{
+    color: rgba(250, 243, 243, 0.96);
+    font-size: 3em;
+}
+.guesses{
+    color: yellow;
+}
+.footer{
+    color: olivedrab;
 }

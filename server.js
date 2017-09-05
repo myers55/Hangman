@@ -22,7 +22,7 @@ var unknownFields = {};
 var hangWordHidden = new Array(hangWord.length); 
 
 for (var i = 0; i < hangWordHidden.length; i++) {
-    hangWordHidden[i] = "$ ";
+    hangWordHidden[i] = "@ ";
 }
 unknownFields.unknownWord = hangWordHidden;
 unknownFields.lettersGuessed = [];
@@ -73,7 +73,7 @@ server.post('/', (request, response) => {
   }
   var winner = true;
   for (var i = 0; i < request.session.unknownWord.length; i++) {
-    if (request.session.unknownWord[i] === "$ ") {
+    if (request.session.unknownWord[i] === "@ ") {
       winner = false;
     }
   }

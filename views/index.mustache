@@ -8,9 +8,10 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- <img src="./hangmanBackground.png" alt=""> -->
+    <div class="hangman">
         <div class='header'>
-            <h3>Lets Play Hangman</h3>
+            <h3>Got what it takes?</h3>
         </div>
         <h1 class='guess'>
             {{#unknownWord}} {{.}} {{/unknownWord}}
@@ -26,7 +27,7 @@
             </div>
             <br>
             <div>
-                <div class='header'>
+                <div class='footer'>
                     <h3>You have {{trials}} attempts left</h3>
                 </div>
                 <h3>{{answer}}</h3>
